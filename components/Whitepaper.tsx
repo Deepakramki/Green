@@ -252,7 +252,7 @@ const Whitepaper: React.FC = () => {
                              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="bg-white dark:bg-slate-900 p-4 rounded-lg">
                                     <p className="text-[10px] md:text-xs text-slate-400 uppercase font-semibold">Total Supply</p>
-                                    <p className="text-lg md:text-xl font-bold text-slate-900 dark:text-white">1,000,000,000 GEC</p>
+                                    <p className="text-lg md:text-xl font-bold text-slate-900 dark:text-white">1B GEC</p>
                                 </div>
                                 <div className="bg-white dark:bg-slate-900 p-4 rounded-lg">
                                     <p className="text-[10px] md:text-xs text-slate-400 uppercase font-semibold">Market Supply</p>
@@ -346,7 +346,7 @@ const Whitepaper: React.FC = () => {
                         </p>
                     </div>
 
-                    <div id="conclusion" className="border-t border-slate-200 dark:border-slate-700 pt-8 mt-8 scroll-mt-28">
+                    <div id="conclusion" className="border-t border-slate-200 dark:border-slate-800 pt-8 mt-8 scroll-mt-28">
                         <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white mb-4">Conclusion</h3>
                         <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm md:text-base">
                             Greencoin (GEC) is more than a digital asset; it is a technological bridge to a sustainable future. Through verified smart contracts, a growth-oriented 0% burn model, and direct community involvement, we are redefining what a "green" cryptocurrency can achieve.

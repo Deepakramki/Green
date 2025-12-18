@@ -119,7 +119,7 @@ const App: React.FC = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
                         <div className="group relative p-6 bg-emerald-800/40 rounded-2xl border border-emerald-700 hover:bg-emerald-800/60 transition-all duration-300 hover:-translate-y-1 backdrop-blur-md overflow-hidden">
                             <div className="absolute -right-4 -top-4 w-20 h-20 bg-emerald-500/20 rounded-full blur-xl group-hover:bg-emerald-500/30 transition-colors"></div>
-                            <div className="text-3xl font-bold text-white mb-2">1,000,000,000</div>
+                            <div className="text-4xl font-bold text-white mb-2">1B</div>
                             <div className="text-sm font-medium text-emerald-300 uppercase tracking-wide">Total Supply (GEC)</div>
                         </div>
 
