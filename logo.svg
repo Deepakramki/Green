@@ -1,0 +1,39 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="coin_bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDE047"/>
+      <stop offset="1" stop-color="#EAB308"/>
+    </linearGradient>
+    <linearGradient id="leaf_fill" x1="256" y1="120" x2="256" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10B981"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+    <filter id="soft_shadow" x="-20%" y="-10%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15"/>
+      <feOffset dx="0" dy="12" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Outer Gold Coin -->
+  <circle cx="256" cy="256" r="230" fill="url(#coin_bg)" stroke="#854D0E" stroke-width="10" filter="url(#soft_shadow)"/>
+  
+  <!-- Decorative Inner Dotted Ring -->
+  <circle cx="256" cy="256" r="205" fill="none" stroke="#CA8A04" stroke-width="3" stroke-dasharray="8 12" stroke-linecap="round"/>
+  
+  <!-- The Green Leaf Energy Symbol -->
+  <path d="M256 110C190 110 140 165 140 235C140 320 256 410 256 410C256 410 372 320 372 235C372 165 322 110 256 110Z" fill="url(#leaf_fill)" />
+  
+  <!-- Symbol Detail/Highlight -->
+  <path d="M256 140C220 140 195 170 195 215C195 275 256 350 256 350C256 350 317 275 317 215C317 170 292 140 256 140Z" fill="white" fill-opacity="0.15" />
+  
+  <!-- Central Energy Core -->
+  <circle cx="256" cy="220" r="32" fill="#ECFDF5" />
+  <path d="M256 200V240M236 220H276" stroke="#065F46" stroke-width="10" stroke-linecap="round"/>
+</svg>

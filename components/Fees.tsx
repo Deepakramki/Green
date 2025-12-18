@@ -1,5 +1,5 @@
 import React from 'react';
-import { Coins, ArrowRightLeft, Flame, Wallet, Percent } from 'lucide-react';
+import { Coins, ArrowRightLeft, Lightbulb, Wallet, Percent, Microscope } from 'lucide-react';
 
 const Fees: React.FC = () => {
   return (
@@ -20,9 +20,9 @@ const Fees: React.FC = () => {
                 0% { transform: rotateX(0) rotateY(0) rotateZ(0); }
                 100% { transform: rotateX(360deg) rotateY(180deg) rotateZ(90deg); }
             }
-            @keyframes burn-rise {
-               0% { transform: translateY(0) scale(1); opacity: 0.8; }
-               100% { transform: translateY(-100px) scale(0); opacity: 0; }
+            @keyframes light-glow {
+               0%, 100% { filter: drop-shadow(0 0 5px rgba(251, 191, 36, 0.4)); }
+               50% { filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.8)); }
             }
         `}</style>
 
@@ -40,15 +40,6 @@ const Fees: React.FC = () => {
              </div>
         </div>
 
-        {/* 3D Burning Pile (Center Background) */}
-        <div className="absolute bottom-20 left-1/2 -translate-x-1/2 opacity-20 hidden md:block">
-             <div className="relative w-20 h-20">
-                <div className="absolute w-8 h-8 bg-red-400 rounded-sm" style={{ animation: 'burn-rise 2s ease-in infinite' }}></div>
-                <div className="absolute w-6 h-6 bg-orange-400 rounded-sm left-4" style={{ animation: 'burn-rise 2.5s ease-in infinite 0.5s' }}></div>
-                <div className="absolute w-8 h-8 bg-red-500 rounded-sm right-2" style={{ animation: 'burn-rise 2.2s ease-in infinite 1s' }}></div>
-             </div>
-        </div>
-
         {/* Floating Percent Sign (Right) */}
         <div className="absolute top-40 right-10 md:right-32 text-emerald-100 dark:text-emerald-900 hidden md:block" style={{ animation: 'float-percent 6s ease-in-out infinite' }}>
             <Percent className="w-48 h-48" strokeWidth={1} />
@@ -56,7 +47,7 @@ const Fees: React.FC = () => {
 
         {/* Tumbling Geometric Shape (Bottom Left) */}
         <div className="absolute bottom-20 left-1/4 opacity-40 dark:opacity-20 hidden md:block">
-            <div className="w-16 h-16 bg-gradient-to-br from-red-200 to-orange-200 dark:from-red-900 dark:to-orange-900 rounded-xl border border-red-300 dark:border-red-800" style={{ animation: 'tumble 12s linear infinite' }}></div>
+            <div className="w-16 h-16 bg-gradient-to-br from-amber-200 to-yellow-200 dark:from-amber-900 dark:to-yellow-900 rounded-xl border border-amber-300 dark:border-amber-800" style={{ animation: 'tumble 12s linear infinite' }}></div>
         </div>
 
         {/* Background Gradients */}
@@ -70,21 +61,21 @@ const Fees: React.FC = () => {
           </div>
           <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Transaction Fees</h1>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Our fee structure is designed to sustain the ecosystem, reward holders, and fund environmental projects.
+            Our fee structure is optimized for network growth, community rewards, and sustainable project development.
             Total Transaction Tax: <span className="font-bold text-emerald-600 dark:text-emerald-400 text-xl">5%</span>
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="p-8 rounded-3xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-slate-200 dark:border-slate-700 relative overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-red-100 dark:bg-red-900/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-100 dark:bg-amber-900/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
             <div className="relative z-10">
-                <div className="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center text-red-600 dark:text-red-400 mb-6 shadow-sm">
-                    <Flame className="w-6 h-6" />
+                <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center text-amber-600 dark:text-amber-400 mb-6 shadow-sm" style={{ animation: 'light-glow 3s ease-in-out infinite' }}>
+                    <Lightbulb className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">2% Burn</h3>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">2% Innovation</h3>
                 <p className="text-slate-600 dark:text-slate-400">
-                    Deflationary mechanism. These tokens are permanently removed from circulation, increasing scarcity.
+                    Allocated to our Research & Development fund to accelerate breakthrough clean energy storage technologies.
                 </p>
             </div>
           </div>
@@ -97,7 +88,7 @@ const Fees: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">2% Eco-Fund</h3>
                 <p className="text-slate-600 dark:text-slate-400">
-                    Directly contributed to our Green Treasury to fund renewable energy projects and reforestation.
+                    Directly contributed to our Green Treasury to fund verified solar, wind, and reforestation initiatives.
                 </p>
             </div>
           </div>
@@ -110,7 +101,7 @@ const Fees: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">1% Redistribution</h3>
                 <p className="text-slate-600 dark:text-slate-400">
-                    Automatically distributed to all existing holders as a reward for holding GreenCoin.
+                    Automatically distributed to all existing GEC holders as a loyalty reward for supporting the network.
                 </p>
             </div>
           </div>
@@ -124,15 +115,15 @@ const Fees: React.FC = () => {
                 <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                         <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5 text-emerald-400">✓</div>
-                        <p className="text-slate-300 dark:text-slate-200">Wallet-to-wallet transfers between family and friends are tax-free.</p>
+                        <p className="text-slate-300 dark:text-slate-200">Wallet-to-wallet transfers between verified ecosystem partners are tax-free.</p>
                     </li>
                     <li className="flex items-start gap-3">
                         <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5 text-emerald-400">✓</div>
-                        <p className="text-slate-300 dark:text-slate-200">Donations to registered charities using GreenCoin have 0% fees.</p>
+                        <p className="text-slate-300 dark:text-slate-200">Donations to registered green charities using GreenCoin have 0% fees.</p>
                     </li>
                     <li className="flex items-start gap-3">
                         <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5 text-emerald-400">✓</div>
-                        <p className="text-slate-300 dark:text-slate-200">Staking and unstaking actions are exempt from the transaction tax.</p>
+                        <p className="text-slate-300 dark:text-slate-200">Staking rewards claims and internal platform operations are exempt from tax.</p>
                     </li>
                 </ul>
             </div>

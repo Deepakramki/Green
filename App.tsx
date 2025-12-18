@@ -11,7 +11,7 @@ import Agreement from './components/Agreement';
 import Footer from './components/Footer';
 import Whitepaper from './components/Whitepaper';
 import { PageView } from './types';
-import { Coins, Flame, ArrowUpRight } from 'lucide-react';
+import { Coins, Lightbulb, ArrowUpRight, Lock, CheckCircle, TreeDeciduous, Microscope } from 'lucide-react';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<PageView>('home');
@@ -50,7 +50,7 @@ const App: React.FC = () => {
             <Hero onNavigate={setCurrentPage} />
             <SupportedWallets />
             <Features />
-            {/* Tokenomics Teaser */}
+            {/* Tokenomics Section (Economic) */}
             <section id="tokenomics" className="py-24 bg-emerald-900 text-white relative overflow-hidden" style={{ perspective: '1000px' }}>
                 
                 {/* 3D Background Elements */}
@@ -69,10 +69,6 @@ const App: React.FC = () => {
                             50% { opacity: 0.6; }
                             100% { bottom: 120%; opacity: 0; transform: translateX(20px); }
                         }
-                         @keyframes pulse-glow {
-                            0%, 100% { opacity: 0.3; transform: scale(1); }
-                            50% { opacity: 0.6; transform: scale(1.1); }
-                        }
                     `}</style>
 
                     {/* 3D Floating Coin (Left) */}
@@ -81,7 +77,6 @@ const App: React.FC = () => {
                              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-yellow-400 to-yellow-600 border-4 border-yellow-300 shadow-xl flex items-center justify-center transform translate-z-4">
                                 <span className="text-6xl font-bold text-yellow-100">$</span>
                              </div>
-                             {/* Coin Edge thickness simulation */}
                              <div className="absolute inset-0 rounded-full bg-yellow-700 transform translate-z-0 translate-x-2"></div>
                         </div>
                     </div>
@@ -92,7 +87,7 @@ const App: React.FC = () => {
                          <div className="absolute inset-4 border-[2px] border-emerald-300 rounded-full" style={{ animation: 'spin-ring-flat 15s linear infinite reverse' }}></div>
                     </div>
 
-                    {/* Rising Energy Particles (Burn mechanism visualization) */}
+                    {/* Rising Energy Particles */}
                     {[...Array(12)].map((_, i) => (
                         <div 
                             key={i}
@@ -107,7 +102,6 @@ const App: React.FC = () => {
                         ></div>
                     ))}
 
-                    {/* Background Skewed Layer */}
                     <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-emerald-800/40 to-transparent skew-x-12 transform translate-x-32 backdrop-blur-[1px]"></div>
                 </div>
 
@@ -119,44 +113,63 @@ const App: React.FC = () => {
 
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white tracking-tight drop-shadow-sm">Sustainable Tokenomics</h2>
                     <p className="text-emerald-100 max-w-2xl mx-auto mb-12 text-lg md:text-xl leading-relaxed">
-                        A deflationary model designed to reward long-term holders and the planet. 
-                        Every transaction fuels the eco-fund and reduces supply.
+                        Transparent supply management and verified vesting schedules to ensure long-term stability and global ecological impact.
                     </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
                         <div className="group relative p-6 bg-emerald-800/40 rounded-2xl border border-emerald-700 hover:bg-emerald-800/60 transition-all duration-300 hover:-translate-y-1 backdrop-blur-md overflow-hidden">
                             <div className="absolute -right-4 -top-4 w-20 h-20 bg-emerald-500/20 rounded-full blur-xl group-hover:bg-emerald-500/30 transition-colors"></div>
-                            <div className="text-4xl font-bold text-white mb-2">10B</div>
-                            <div className="text-sm font-medium text-emerald-300 uppercase tracking-wide">Total Supply</div>
-                        </div>
-
-                        <div className="group relative p-6 bg-emerald-800/40 rounded-2xl border border-emerald-700 hover:bg-emerald-800/60 transition-all duration-300 hover:-translate-y-1 backdrop-blur-md overflow-hidden">
-                            <div className="absolute -right-4 -top-4 w-20 h-20 bg-red-500/20 rounded-full blur-xl group-hover:bg-red-500/30 transition-colors"></div>
-                            <div className="flex items-center justify-center gap-2 text-4xl font-bold text-white mb-2">
-                                2% <Flame className="w-6 h-6 text-red-400 animate-pulse" />
-                            </div>
-                            <div className="text-sm font-medium text-emerald-300 uppercase tracking-wide">Burn Rate</div>
-                            <p className="text-xs text-emerald-400/70 mt-2">Per Transaction</p>
+                            <div className="text-3xl font-bold text-white mb-2">1,000,000,000</div>
+                            <div className="text-sm font-medium text-emerald-300 uppercase tracking-wide">Total Supply (GEC)</div>
                         </div>
 
                         <div className="group relative p-6 bg-emerald-800/40 rounded-2xl border border-emerald-700 hover:bg-emerald-800/60 transition-all duration-300 hover:-translate-y-1 backdrop-blur-md overflow-hidden">
                             <div className="absolute -right-4 -top-4 w-20 h-20 bg-blue-500/20 rounded-full blur-xl group-hover:bg-blue-500/30 transition-colors"></div>
-                            <div className="text-4xl font-bold text-white mb-2">8K+</div>
-                            <div className="text-sm font-medium text-emerald-300 uppercase tracking-wide">Holders</div>
-                            <div className="flex -space-x-2 justify-center mt-3">
-                                {[1,2,3,4].map(i => (
-                                    <div key={i} className={`w-6 h-6 rounded-full border border-emerald-800 bg-emerald-300/80`}></div>
-                                ))}
+                            <div className="text-2xl font-bold text-white mb-2">50M - 100M</div>
+                            <div className="text-sm font-medium text-emerald-300 uppercase tracking-wide">Circulating Supply</div>
+                        </div>
+
+                        <div className="group relative p-6 bg-emerald-800/40 rounded-2xl border border-emerald-700 hover:bg-emerald-800/60 transition-all duration-300 hover:-translate-y-1 backdrop-blur-md overflow-hidden">
+                            <div className="absolute -right-4 -top-4 w-20 h-20 bg-amber-500/20 rounded-full blur-xl group-hover:bg-amber-500/30 transition-colors"></div>
+                            <div className="flex items-center justify-center gap-2 text-4xl font-bold text-white mb-2">
+                                2% <Lightbulb className="w-6 h-6 text-amber-400 animate-pulse" />
                             </div>
+                            <div className="text-sm font-medium text-emerald-300 uppercase tracking-wide">Innovation Fund</div>
                         </div>
 
                         <div className="group relative p-6 bg-emerald-800/40 rounded-2xl border border-emerald-700 hover:bg-emerald-800/60 transition-all duration-300 hover:-translate-y-1 backdrop-blur-md overflow-hidden">
                             <div className="absolute -right-4 -top-4 w-20 h-20 bg-yellow-500/20 rounded-full blur-xl group-hover:bg-yellow-500/30 transition-colors"></div>
                             <div className="flex items-center justify-center gap-2 text-4xl font-bold text-white mb-2">
-                                $1M <ArrowUpRight className="w-6 h-6 text-yellow-400" />
+                                480k+ <TreeDeciduous className="w-6 h-6 text-emerald-400 animate-bounce" />
                             </div>
-                            <div className="text-sm font-medium text-emerald-300 uppercase tracking-wide">Donated</div>
-                             <p className="text-xs text-emerald-400/70 mt-2">To Global NGOs</p>
+                            <div className="text-sm font-medium text-emerald-300 uppercase tracking-wide">Trees Planted</div>
+                        </div>
+                    </div>
+
+                    <div className="max-w-4xl mx-auto bg-emerald-950/60 backdrop-blur-xl rounded-3xl border border-emerald-700/50 p-8 text-left">
+                        <div className="flex items-center gap-3 mb-6">
+                            <Lock className="w-6 h-6 text-emerald-400" />
+                            <h3 className="text-2xl font-bold">Locked Funds & Vesting</h3>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="space-y-2">
+                                <div className="text-emerald-400 text-xs font-bold uppercase">Team & Dev</div>
+                                <div className="text-white font-bold">24 Months</div>
+                                <div className="text-emerald-300/60 text-xs">Start: Jan 2026 | 6m Cliff</div>
+                                <div className="flex items-center gap-2 text-emerald-500 text-xs"><CheckCircle className="w-3 h-3" /> Verified Contract</div>
+                            </div>
+                            <div className="space-y-2">
+                                <div className="text-emerald-400 text-xs font-bold uppercase">Treasury Fund</div>
+                                <div className="text-white font-bold">24 Months</div>
+                                <div className="text-emerald-300/60 text-xs">Start: Jan 2026 | Continuous</div>
+                                <div className="flex items-center gap-2 text-emerald-500 text-xs"><CheckCircle className="w-3 h-3" /> Locked 2028</div>
+                            </div>
+                            <div className="space-y-2">
+                                <div className="text-emerald-400 text-xs font-bold uppercase">Ecosystem</div>
+                                <div className="text-white font-bold">18 Months</div>
+                                <div className="text-emerald-300/60 text-xs">Start: Jan 2026 | Distribution</div>
+                                <div className="flex items-center gap-2 text-emerald-500 text-xs"><CheckCircle className="w-3 h-3" /> Governance DAO</div>
+                            </div>
                         </div>
                     </div>
                 </div>

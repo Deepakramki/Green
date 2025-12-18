@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Leaf, FileText, Sun, Moon } from 'lucide-react';
+import { Menu, X, FileText, Sun, Moon, Leaf } from 'lucide-react';
 import { NavItem, PageView } from '../types';
 
 interface NavbarProps {
@@ -18,17 +18,14 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, isDarkMode, toggleTheme }) 
   ];
 
   const handleNavClick = (item: NavItem) => {
-    // 1. Switch page if action is defined
     if (item.action) {
       item.action();
     }
     
-    // 2. Handle scrolling logic
     if (item.href === '#') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (item.href.startsWith('#')) {
       const targetId = item.href.substring(1);
-      // Use setTimeout to ensure the DOM has updated if the page changed
       setTimeout(() => {
         const element = document.getElementById(targetId);
         if (element) {
@@ -52,8 +49,8 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, isDarkMode, toggleTheme }) 
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             >
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-yellow-400 border-2 border-yellow-500 shadow-sm text-emerald-700 transition-transform group-hover:scale-110">
-                 <Leaf className="w-6 h-6 fill-emerald-700" />
+              <div className="relative flex items-center justify-center w-9 h-9 rounded-full bg-yellow-500 border border-yellow-600 shadow-sm transition-transform group-hover:scale-110 text-emerald-800">
+                 <Leaf className="w-5 h-5 fill-emerald-900" />
               </div>
               <span className="font-bold text-xl tracking-tight text-slate-800 dark:text-slate-100">GreenCoin</span>
             </div>
@@ -106,7 +103,6 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, isDarkMode, toggleTheme }) 
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-white dark:bg-slate-900 border-b border-emerald-100 dark:border-emerald-900">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
