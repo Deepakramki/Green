@@ -1,5 +1,5 @@
 import React from 'react';
-import { Coins, ArrowRightLeft, Lightbulb, Wallet, Percent, Microscope } from 'lucide-react';
+import { Coins, ArrowRightLeft, Lightbulb, Wallet, Percent, ShieldCheck, Zap } from 'lucide-react';
 
 const Fees: React.FC = () => {
   return (
@@ -59,23 +59,22 @@ const Fees: React.FC = () => {
           <div className="inline-flex items-center justify-center p-3 bg-emerald-100 dark:bg-emerald-900/40 rounded-full text-emerald-600 dark:text-emerald-400 mb-6 shadow-sm ring-4 ring-emerald-50 dark:ring-emerald-900/20">
             <Coins className="w-8 h-8" />
           </div>
-          <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Transaction Fees</h1>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Our fee structure is optimized for network growth, community rewards, and sustainable project development.
-            Total Transaction Tax: <span className="font-bold text-emerald-600 dark:text-emerald-400 text-xl">5%</span>
+          <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">No Transaction Fees</h1>
+          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            We believe in total financial freedom. GreenCoin features <span className="font-bold text-emerald-600 dark:text-emerald-400 text-xl">0% fees</span> on all network activities, ensuring your capital is fully deployed toward a sustainable future.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="p-8 rounded-3xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-slate-200 dark:border-slate-700 relative overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-100 dark:bg-amber-900/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-100 dark:bg-emerald-900/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
             <div className="relative z-10">
-                <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center text-amber-600 dark:text-amber-400 mb-6 shadow-sm" style={{ animation: 'light-glow 3s ease-in-out infinite' }}>
-                    <Lightbulb className="w-6 h-6" />
+                <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-6 shadow-sm">
+                    <Zap className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">2% Innovation</h3>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">0% Buy Tax</h3>
                 <p className="text-slate-600 dark:text-slate-400">
-                    Allocated to our Research & Development fund to accelerate breakthrough clean energy storage technologies.
+                    Join the green revolution without entry barriers. Every cent you invest goes directly into your GEC holdings.
                 </p>
             </div>
           </div>
@@ -84,24 +83,24 @@ const Fees: React.FC = () => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-100 dark:bg-emerald-900/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
             <div className="relative z-10">
                 <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-6 shadow-sm">
-                    <Wallet className="w-6 h-6" />
+                    <ShieldCheck className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">2% Eco-Fund</h3>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">0% Sell Tax</h3>
                 <p className="text-slate-600 dark:text-slate-400">
-                    Directly contributed to our Green Treasury to fund verified solar, wind, and reforestation initiatives.
+                    We don't penalize you for rebalancing. Exit or trade your positions with zero network-level slippage or taxes.
                 </p>
             </div>
           </div>
 
           <div className="p-8 rounded-3xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-slate-200 dark:border-slate-700 relative overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 dark:bg-blue-900/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
+             <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-100 dark:bg-emerald-900/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
              <div className="relative z-10">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6 shadow-sm">
+                <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-6 shadow-sm">
                     <ArrowRightLeft className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">1% Redistribution</h3>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">0% Transfer Fee</h3>
                 <p className="text-slate-600 dark:text-slate-400">
-                    Automatically distributed to all existing GEC holders as a loyalty reward for supporting the network.
+                    Move your assets freely between wallets or ecosystem partners without losing a single GEC to transaction taxes.
                 </p>
             </div>
           </div>
@@ -111,19 +110,19 @@ const Fees: React.FC = () => {
              <div className="absolute -right-20 -top-20 w-64 h-64 bg-emerald-500/20 rounded-full blur-3xl"></div>
              <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
             <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-6">Fee Exemptions</h3>
+                <h3 className="text-2xl font-bold mb-6">Efficiency & Sustainability</h3>
                 <ul className="space-y-4">
                     <li className="flex items-start gap-3">
                         <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5 text-emerald-400">✓</div>
-                        <p className="text-slate-300 dark:text-slate-200">Wallet-to-wallet transfers between verified ecosystem partners are tax-free.</p>
+                        <p className="text-slate-300 dark:text-slate-200">Our ecosystem projects are funded via initial supply allocation, not by taxing users.</p>
                     </li>
                     <li className="flex items-start gap-3">
                         <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5 text-emerald-400">✓</div>
-                        <p className="text-slate-300 dark:text-slate-200">Donations to registered green charities using GreenCoin have 0% fees.</p>
+                        <p className="text-slate-300 dark:text-slate-200">Zero hidden costs for staking rewards, claims, or internal governance voting.</p>
                     </li>
                     <li className="flex items-start gap-3">
                         <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5 text-emerald-400">✓</div>
-                        <p className="text-slate-300 dark:text-slate-200">Staking rewards claims and internal platform operations are exempt from tax.</p>
+                        <p className="text-slate-300 dark:text-slate-200">Gas costs on the BNB Smart Chain remain negligible (typically under $0.05).</p>
                     </li>
                 </ul>
             </div>

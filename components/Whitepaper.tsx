@@ -1,5 +1,4 @@
 import React from 'react';
-// Added missing CheckCircle import from lucide-react
 import { Leaf, Cpu, Globe, ShieldCheck, Wind, Droplets, Sun, Code, Network, PieChart, Users, Zap, FileText, List, TreeDeciduous, ExternalLink, Shield, Lightbulb, TrendingUp, Handshake, CheckCircle } from 'lucide-react';
 
 const Whitepaper: React.FC = () => {
@@ -122,10 +121,10 @@ const Whitepaper: React.FC = () => {
                     <div id="abstract" className="mb-12 md:mb-16 scroll-mt-28">
                         <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-4 border-b pb-2 border-slate-200 dark:border-slate-700">Abstract</h2>
                         <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-base md:text-lg mb-4">
-                            Green Energy Coin (GEC) is a decentralized asset protocol on the BNB Smart Chain (BEP-20) designed to bridge digital finance with environmental preservation. As the global economy transitions towards renewable energy, traditional financial systems often lag in providing direct, transparent, and low-friction investment pathways for retail investors to participate in ecological projects.
+                            Green Energy Coin (GEC) is a decentralized asset protocol on the BNB Smart Chain (BEP-20) designed to bridge digital finance with environmental preservation. As the global economy transitions towards renewable energy, GEC provides a frictionless investment pathway for retail investors to participate in ecological projects with <span className="font-bold text-emerald-600 dark:text-emerald-400">zero transaction fees</span>.
                         </p>
                         <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-base md:text-lg">
-                            GEC solves this by integrating a transparent, automated contribution model where every transaction fuels reforestation and sustainable energy research. By combining the efficiency of the BNB Smart Chain with a growth-focused tokenomic model, GEC creates a self-sustaining ecosystem for planetary healing.
+                            Unlike traditional tokens that tax users for every trade, GEC maintains a 0% fee model, with environmental initiatives and research funded by a dedicated Ecosystem Treasury. This creates a self-sustaining model for planetary healing without adding financial friction for our community.
                         </p>
                     </div>
 
@@ -173,20 +172,20 @@ const Whitepaper: React.FC = () => {
                             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">2. Architecture</h2>
                         </div>
                         <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed mb-4">
-                            The GEC protocol is built on the BNB Smart Chain (BSC) to leverage its Proof-of-Staked Authority (PoSA) consensus. This choice was driven by the need for a blockchain that mirrors our ecological values:
+                            The GEC protocol is built on the BNB Smart Chain (BSC) to leverage its Proof-of-Staked Authority (PoSA) consensus. This choice ensures that while GEC maintains <span className="font-bold">0% transaction fees</span> at the smart contract level, users only pay the standard minimal BSC network gas fees.
                         </p>
                         <ul className="space-y-3 mb-6">
                             <li className="flex items-start gap-3 text-slate-600 dark:text-slate-300 text-sm">
                                 <Zap className="w-5 h-5 text-yellow-500 flex-shrink-0" />
-                                <span><strong>Energy Efficiency:</strong> PoSA consumes a fraction of the electricity compared to Proof-of-Work systems like Bitcoin.</span>
+                                <span><strong>Energy Efficiency:</strong> PoSA consumes a fraction of the electricity compared to Proof-of-Work systems.</span>
                             </li>
                             <li className="flex items-start gap-3 text-slate-600 dark:text-slate-300 text-sm">
                                 <TrendingUp className="w-5 h-5 text-emerald-500 flex-shrink-0" />
-                                <span><strong>Scalability:</strong> Supporting up to 300 transactions per second with 3-second block times.</span>
+                                <span><strong>Scalability:</strong> Supporting high-frequency trading with zero contract-level taxes.</span>
                             </li>
                             <li className="flex items-start gap-3 text-slate-600 dark:text-slate-300 text-sm">
                                 <Network className="w-5 h-5 text-blue-500 flex-shrink-0" />
-                                <span><strong>Interoperability:</strong> Full EVM compatibility allows for easy integration with the broader DeFi and NFT ecosystems.</span>
+                                <span><strong>Interoperability:</strong> Full EVM compatibility allows for zero-tax transfers across DeFi protocols.</span>
                             </li>
                         </ul>
                     </div>
@@ -199,14 +198,14 @@ const Whitepaper: React.FC = () => {
                             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">3. Environment Strategy</h2>
                         </div>
                         <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base mb-4">
-                            Our environmental impact is managed through the <strong>Eco-Treasury</strong>, a multi-signature wallet that receives 2% of every transaction on the network.
+                            Our environmental impact is managed through the <strong>Eco-Treasury</strong>, which is funded through initial supply allocations rather than per-transaction taxes. This ensures a consistent funding source without burdening the user.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="p-5 border border-emerald-100 dark:border-emerald-800 rounded-2xl bg-white dark:bg-slate-900">
                                 <h4 className="font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
                                     <TreeDeciduous className="w-4 h-4 text-emerald-500" /> Reforestation
                                 </h4>
-                                <p className="text-xs text-slate-500">Automated funding for global tree planting initiatives targeting carbon sequestration hotspots.</p>
+                                <p className="text-xs text-slate-500">Allocated funding for global tree planting initiatives targeting carbon sequestration hotspots.</p>
                             </div>
                             <div className="p-5 border border-emerald-100 dark:border-emerald-800 rounded-2xl bg-white dark:bg-slate-900">
                                 <h4 className="font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
@@ -234,7 +233,7 @@ const Whitepaper: React.FC = () => {
                             </div>
                             <div className="flex items-center gap-4 p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
                                 <CheckCircle className="w-5 h-5 text-emerald-500" />
-                                <span className="text-sm text-slate-700 dark:text-slate-300"><strong>Multi-Sig Governance:</strong> Treasury and Ecosystem wallets require 3-of-5 signatures from the board.</span>
+                                <span className="text-sm text-slate-700 dark:text-slate-300"><strong>Multi-Sig Governance:</strong> Treasury and Ecosystem wallets require 3-of-5 board signatures.</span>
                             </div>
                         </div>
                     </div>
@@ -244,7 +243,7 @@ const Whitepaper: React.FC = () => {
                             <div className="p-2 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-lg shadow-sm">
                                 <PieChart className="w-6 h-6" />
                             </div>
-                            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">5. Tokenomics & Vesting</h2>
+                            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">5. Tokenomics & 0% Fee Model</h2>
                         </div>
                         
                         <div className="bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-5 md:p-6 shadow-sm mb-8">
@@ -264,10 +263,10 @@ const Whitepaper: React.FC = () => {
                         <div className="bg-amber-50 dark:bg-amber-900/10 p-6 rounded-xl border border-amber-100 dark:border-amber-800 mb-8">
                             <div className="flex items-center gap-2 mb-2 text-amber-700 dark:text-amber-400">
                                 <Lightbulb className="w-5 h-5" />
-                                <h4 className="font-bold">Growth Economic Model (0% Burn)</h4>
+                                <h4 className="font-bold">Zero-Fee Ecosystem (0% Tax)</h4>
                             </div>
                             <p className="text-sm text-slate-600 dark:text-slate-300">
-                                Unlike traditional deflationary assets, GEC implements a 0% burn policy, instead reallocating all network fees toward a <strong>2% Innovation & Research Fund</strong>. This ensures capital is actively deployed to build real-world green infrastructure rather than simply removing supply.
+                                GEC implements a <span className="font-bold">0% Transaction Tax</span>. This means 100% of tokens bought are delivered to the user's wallet. Research & Development is sustained by an initial <strong>2% Innovation & Research Supply Allocation</strong>, ensuring growth without taxing transactions.
                             </p>
                         </div>
 
@@ -326,7 +325,7 @@ const Whitepaper: React.FC = () => {
                             </div>
                             <div className="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl text-center">
                                 <PieChart className="w-6 h-6 mx-auto mb-2 text-pink-500" />
-                                <p className="text-xs font-bold uppercase">Adjust Tax Rates</p>
+                                <p className="text-xs font-bold uppercase">Manage Treasury</p>
                             </div>
                         </div>
                     </div>
@@ -339,17 +338,17 @@ const Whitepaper: React.FC = () => {
                             <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">7. Future Tech & AI Integration</h2>
                         </div>
                         <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base mb-4 leading-relaxed">
-                            Our roadmap integrates cutting-edge AI to enhance the ecological vision. By using the <strong>Gemini AI Studio</strong>, we enable the community to visualize green transformations of their urban environments.
+                            Our roadmap integrates cutting-edge AI to enhance the ecological vision. By using the <strong>Gemini AI Studio</strong>, we enable the community to visualize green transformations.
                         </p>
                         <p className="text-slate-600 dark:text-slate-300 text-sm md:text-base mb-6">
-                            Beyond imagery, our R&D fund is exploring "Smart Grid Oracle" technology, which will allow GEC to be used as a settlement layer for peer-to-peer renewable energy trading.
+                            Beyond imagery, our R&D fund is exploring "Smart Grid Oracle" technology, allowing GEC to be used as a settlement layer for peer-to-peer renewable energy trading with <span className="font-bold">zero internal fees</span>.
                         </p>
                     </div>
 
                     <div id="conclusion" className="border-t border-slate-200 dark:border-slate-800 pt-8 mt-8 scroll-mt-28">
                         <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white mb-4">Conclusion</h3>
                         <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm md:text-base">
-                            Greencoin (GEC) is more than a digital asset; it is a technological bridge to a sustainable future. Through verified smart contracts, a growth-oriented 0% burn model, and direct community involvement, we are redefining what a "green" cryptocurrency can achieve.
+                            Greencoin (GEC) is more than a digital asset; it is a technological bridge to a sustainable future. Through verified smart contracts and a highly efficient <span className="font-bold">0% tax model</span>, we are redefining what a green cryptocurrency can achieve.
                         </p>
                     </div>
 
